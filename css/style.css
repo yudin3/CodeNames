@@ -1,0 +1,93 @@
+html{
+    font-size: 62.5%;
+}
+
+img{
+    max-width: 100%;
+    }
+
+a{
+    text-decoration: none;
+    }
+
+p{
+    margin: 0 0 2rem 0;
+    line-height: 1.4;
+    }
+
+button{
+    cursor: pointer;
+}
+
+p:last-child{
+    margin-bottom: 0;
+    }
+
+.main-container{
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.grid-container{
+    display: grid; 
+    grid-gap: 20px;
+    width: 830px;
+    margin: 0 auto;
+}
+
+.field{
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(5, 80px);
+
+
+}
+
+.cards__switcher{
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(2, 80px);
+    margin-bottom: 3rem;
+}
+
+
+.buttons{
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(2, 80px);
+}
+
+.grid-item{
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+.field-item{
+    width: 150px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+.gray{
+    background-color: gray;
+    color: gray;
+}
+
+.red{
+    background-color: red;
+    color: red;
+}
+
+.blue{
+    background-color: blue;
+    color: blue;
+}
+
+.black{
+    background-color: black;
+    color: black;
+}
+
+.none{
+    display: none;
+}
