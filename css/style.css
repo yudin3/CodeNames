@@ -2,6 +2,11 @@ html{
     font-size: 62.5%;
 }
 
+body{
+    font-size: 1.4rem;
+    margin: 4rem 0 0 0;
+}
+
 img{
     max-width: 100%;
     }
@@ -19,6 +24,21 @@ button{
     cursor: pointer;
 }
 
+button:hover{
+    background-color: blue;
+    color: white;
+}
+
+button:focus{
+    background-color: blue;
+    color: white;
+}
+
+.button{
+    min-width: 10rem;
+    min-height: 4rem;
+}
+
 p:last-child{
     margin-bottom: 0;
     }
@@ -28,44 +48,73 @@ p:last-child{
     margin: 0 auto;
 }
 
-.grid-container{
-    display: grid; 
-    grid-gap: 20px;
-    width: 830px;
+.switcher{
+    width: 90rem;
     margin: 0 auto;
 }
 
 .field{
-    grid-template-columns: repeat(5, 150px);
-    grid-template-rows: repeat(5, 80px);
+    width: 90rem;
+    margin: 0 auto;
+}
 
+.grid-container{
+    display: grid; 
+    grid-gap: 2rem;
+    
+}
 
+.flex-container{
+    display: flex;
+}
+
+.cards__switcher-item{
+    flex-direction: column;
+}
+
+.switcher__buttons{
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.switcher__buttons-item{
+    margin-right: 3rem;
+}
+
+.switcher__buttons-item:last-child{
+    margin-right: 0;
+}
+
+.field{
+    grid-template-columns: repeat(5, 15rem);
+    grid-template-rows: repeat(5, 8rem);
 }
 
 .cards__switcher{
-    grid-template-columns: repeat(5, 150px);
-    grid-template-rows: repeat(2, 80px);
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(2, auto);
     margin-bottom: 3rem;
 }
 
-
-.buttons{
-    grid-template-columns: repeat(5, 150px);
-    grid-template-rows: repeat(2, 80px);
+.field__swither{
+    margin-bottom: 1rem;
 }
 
 .grid-item{
     text-align: center;
-    line-height: 80px;
     cursor: pointer;
 }
 
 .field-item{
-    width: 150px;
-    height: 80px;
+    /*width: 150px;
+    height: 80px;*/
     text-align: center;
-    line-height: 80px;
+    line-height: 8rem;
     cursor: pointer;
+    border: 3px solid black;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: "Anton-Regular";
 }
 
 .gray{

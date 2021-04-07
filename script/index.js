@@ -208,16 +208,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttonStart = document.querySelector('.start-button');
 
     let cardsSet = false;
+    let redCount = 0;
+    let blueCount = 0;
 
-        buttonSwitchElems.forEach((elem, i) => {
-            elem.addEventListener('click', () => {
-                cardField=cardFieldTemplates[i];
-                console.log(cardField);
-                fieldType=cardField[25];
-                console.log(fieldType);
-                cardsSet=true;
-            });
+    let redwin = 0;
+    let bluewin = 0;
+
+    buttonSwitchElems.forEach((elem, i) => {
+        elem.addEventListener('click', () => {
+            cardField=cardFieldTemplates[i];
+            console.log(cardField);
+            fieldType=cardField[25];
+            console.log(fieldType);
+            cardsSet=true;
+            if (fieldType=='red') {
+                redwin = 9;
+                bluewin = 8;
+            } else {
+                redwin = 8;
+                bluewin = 9;
+            }
         });
+    });
 
     buttonStart.addEventListener('click', () => {
         if (cardsSet==true){
@@ -226,22 +238,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }else
         {alert('Сначала нужно выбрать ключ-карту!')}
     })
-
-
-       
-    let redCount = 0;
-    let blueCount = 0;
-
-    let redwin = 0;
-    let bluewin = 0;
-
-    if (fieldType=='red') {
-        redwin = 9;
-        bluewin = 8;
-    } else {
-        redwin = 8;
-        bluewin = 9;
-    }
 
     cardElems.forEach((card, i) => {
         card.addEventListener('click', () => {
