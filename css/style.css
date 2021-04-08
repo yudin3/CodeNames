@@ -109,12 +109,15 @@ p:last-child{
     /*width: 150px;
     height: 80px;*/
     text-align: center;
-    line-height: 8rem;
+    min-height: 8rem;
     cursor: pointer;
     border: 3px solid black;
     border-radius: 3px;
     text-transform: uppercase;
     font-family: "Anton-Regular";
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .gray{
@@ -139,4 +142,32 @@ p:last-child{
 
 .none{
     display: none;
+}
+
+@media screen and (max-width: 768px){
+    .switcher{
+        width: 100%;
+        margin: 0 2rem;
+    }
+    
+    .field{
+        width: 100%;
+        margin: 0 2rem;
+    }
+
+    .field{
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: repeat(5, auto);
+    }
+    
+    .cards__switcher{
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+        margin-bottom: 3rem;
+    }
+
+    .field-item{
+        padding: 0.5rem;
+        min-height: 5rem;
+    }
 }
